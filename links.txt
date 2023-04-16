@@ -1,0 +1,37 @@
+https://www.kaggle.com/datasets/splcher/animefacedataset  ---------
+
+https://gist.github.com/anirban94chakraborty/0364e37ec1ddd57fe935fcf1e7fabd36  ---------
+
+http://makeyourownneuralnetwork.blogspot.com/2020/02/calculating-output-size-of-convolutions.html#:~:text=Again%2C%20assuming%20square%20shaped%20tensors,output%20is%20of%20size%204.  
+
+https://www.youtube.com/watch?v=KuXjwB4LzSA&t=286s&ab_channel=3Blue1Brown
+
+https://www.youtube.com/watch?v=-SwKNK9MIUU&ab_channel=SebastianRaschka  L13.1 - L13.9
+
+https://www.youtube.com/watch?v=96_oGE8WyPg&ab_channel=JorisvanLienen
+
+https://www.youtube.com/watch?v=_z9bdayg8ZI&ab_channel=AhladKumar
+
+https://www.youtube.com/watch?v=y8LGAhzCOxQ&ab_channel=AhladKumar
+
+https://www.youtube.com/watch?v=aenOaiQPSYA&ab_channel=AhladKumar
+
+https://jonathan-hui.medium.com/gan-wasserstein-gan-wgan-gp-6a1a2aa1b490
+
+https://machinelearningmastery.com/how-to-implement-wasserstein-loss-for-generative-adversarial-networks/#:~:text=The%20Wasserstein%20loss%20function%20seeks,critic%20score%20on%20fake%20images%5D
+
+https://machinelearningmastery.com/practical-guide-to-gan-failure-modes/
+
+https://medium.com/@utk.is.here/keep-calm-and-train-a-gan-pitfalls-and-tips-on-training-generative-adversarial-networks-edd529764aa9
+
+https://stackoverflow.com/questions/49503748/save-and-load-model-optimizer-state
+
+https://towardsdatascience.com/gan-ways-to-improve-gan-performance-acf37f9f59b
+
+https://jonathan-hui.medium.com/gan-spectral-normalization-893b6a4e8f53
+
+An intriguing property here, is the fact that the gradients are taken with respect to the input image. This is done because the objective is to create an image that maximises the loss. A method to accomplish this is to find how much each pixel in the image contributes to the loss value, and add a perturbation accordingly. This works pretty fast because it is easy to find how each input pixel contributes to the loss by using the chain rule and finding the required gradients. Hence, the gradients are taken with respect to the image. In addition, since the model is no longer being trained (thus the gradient is not taken with respect to the trainable variables, i.e., the model parameters), and so the model parameters remain constant. The only goal is to fool an already trained model (extract from https://www.tensorflow.org/tutorials/generative/adversarial_fgsm. A similar idea is implemented with gradient penalty)
+
+
+
+https://github.com/dribnet/plat  el paper del sampling

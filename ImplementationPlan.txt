@@ -1,0 +1,55 @@
+Critic ---> input = image, output = linear
+Generator ---> input = vector, output = matrix with shape == images shape
+
+WGAN-GP ----->  input = image   output = nothing
+    
+    def train_critic(real_image,fake_image,interpolated_image)
+    
+         generate labels = 1
+         generate labels = -1
+    
+         with gradient:
+
+            real_foward = critic(image)
+            fake_foward  = critic(generator(vector))
+            gradient_penalty_foward  = critic(interpolated_image image)
+
+            real_loss = w_loss(real_foward) vs 1
+            fake_loss = w_loss(fake_foward) vs -1
+            gradient_penalty_loss = gp_Loss(gradient_penalty_foward) vs mse to 1    ###funcion gradient_penalty
+
+            total_critic_loss = real_loss + fake_loss + lambda * gradient_penalty_loss
+    
+          gradients(critic.trainable, total_critic loss)
+          apply gradients with critic optimizer
+          
+     def train_generator(vector):
+     
+            with gradient:
+            
+             generate labels = 1
+            
+             generated_image = (generator(vector))
+             generator_loss = w_loss(generated_image) vs 1
+             
+            gradients(generator.trainable, generator_loss loss)  
+            apply gradients with generator optimizer
+            
+            
+     def train_step(image):     
+     
+           input_shape = get batch input shape this epoch
+           
+           vector = generate gaussean distribution of shape input_shape
+         
+           image -----> real_image
+           generator(vector) -----> fake_image
+           interpolation_layer(real_image,fake_image) ---> interpolated_image     
+           
+         
+         for step in critic_steps:
+             train_critic(real_image,fake_image,interpolated_image)
+             
+         train_generator(vector)
+          
+            
