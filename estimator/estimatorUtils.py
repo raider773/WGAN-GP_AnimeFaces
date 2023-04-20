@@ -39,7 +39,6 @@ class Save_images(tf.keras.callbacks.Callback):
         self.path = path + "/images"   
                           
         create_folder(self.path)
-                          
         
     def on_epoch_end(self, epoch, logs=None):
         if epoch % self.save_frecuency == 0:

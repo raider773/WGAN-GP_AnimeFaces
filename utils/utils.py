@@ -13,6 +13,7 @@ def show_pictures(pictures,classes):
             axs[row, col].imshow(pictures[img_idx],cmap = "gray")
             axs[row, col].axis('off')
             axs[row, col].set_title(f'Class: {classes[img_idx]}')
+    
             
 def create_folder(path):
     """Create directory in the given path if it doesn't exists"""
